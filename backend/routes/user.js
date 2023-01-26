@@ -46,7 +46,6 @@ router.post("/sign-up", async (req, res) => {
       will create it in the next step. */
     
     const jwtToken = generateJWT(newUser.id);
-
     return res.status(201).send({ jwtToken: jwtToken, isAuthenticated: true});
 
   } catch (error) {
